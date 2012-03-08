@@ -1,0 +1,190 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: EAGLE Drawing E:/Documents/eagle/projects/Auduino/auduino.brd
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 194 182
+%%EndComments
+
+% Coordinate transfer:
+
+/EU { 254 div 0.072 mul } def
+/inch { 72 mul } def
+
+% Linestyle:
+
+1 setlinecap
+1 setlinejoin
+
+% Drawing functions:
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 EU y1 EU moveto
+   x2 EU y2 EU lineto
+   lw EU setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x EU y EU d 2 div EU 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /an exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   /w2 x2 x1 sub 2 div EU def
+   /h2 y2 y1 sub 2 div EU def
+   gsave
+   x1 x2 add 2 div EU y1 y2 add 2 div EU translate
+   an rotate
+   newpath
+   w2     h2     moveto
+   w2 neg h2     lineto
+   w2 neg h2 neg lineto
+   w2     h2 neg lineto
+   closepath
+   fill
+   grestore
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /lc exch def
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   lw rd 2 mul gt {
+     /rd rd lw 2 div add 2 div def
+     /lw rd 2 mul def
+     } if
+   currentlinecap currentlinejoin
+   lc setlinecap 0 setlinejoin
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/p {  % draw a pie
+   /d exch def
+   /y exch def
+   /x exch def
+   newpath
+   x EU y EU d 2 div EU 0 360 arc
+   fill
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon
+   /an exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   gsave
+   x EU y EU translate
+   an dx dy lt { 90 add /dx dy /dy dx def def } if rotate
+   newpath
+      0 dx 2 div sub EU                    0 dy edge  add EU moveto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div add EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div add EU lineto
+      0 dx 2 div add EU                    0 dy edge  add EU lineto
+      0 dx 2 div add EU                    0 dy edge  sub EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div sub EU lineto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div sub EU lineto
+      0 dx 2 div sub EU                    0 dy edge  sub EU lineto
+   closepath
+   fill
+   grestore
+   } def
+
+470132 268482 493132 277982 180.0 b
+470132 291482 493132 300982 180.0 b
+470132 245482 493132 254982 180.0 b
+529132 256982 552132 289482 180.0 b
+511972 161272 524972 171272 270.0 b
+511972 142272 524972 152272 270.0 b
+511972 191272 524972 201272 90.0 b
+511972 210272 524972 220272 90.0 b
+316472 214232 328472 226232 180.0 b
+296472 214232 308472 226232 180.0 b
+229472 207852 241472 219852 180.0 b
+209472 207852 221472 219852 180.0 b
+532512 176072 552512 194072 270.0 b
+532512 144072 552512 162072 270.0 b
+442488 250808 462488 268808 90.0 b
+442488 282808 462488 300808 90.0 b
+141472 207772 153472 219772 180.0 b
+121472 207772 133472 219772 180.0 b
+91372 101272 107372 116272 270.0 b
+60372 113772 72372 125772 270.0 b
+60372 93772 72372 105772 270.0 b
+527372 86772 539372 98772 90.0 b
+527372 106772 539372 118772 90.0 b
+223372 392902 229372 414902 270.0 b
+275372 367502 281372 389502 270.0 b
+223372 405602 229372 427602 270.0 b
+223372 380202 229372 402202 270.0 b
+223372 367502 229372 389502 270.0 b
+275372 380202 281372 402202 270.0 b
+275372 354802 281372 376802 270.0 b
+275372 342102 281372 364102 270.0 b
+223372 342102 229372 364102 270.0 b
+275372 316702 281372 338702 270.0 b
+223372 354802 229372 376802 270.0 b
+223372 329402 229372 351402 270.0 b
+275372 329402 281372 351402 270.0 b
+223372 316702 229372 338702 270.0 b
+275372 392902 281372 414902 270.0 b
+275372 405602 281372 427602 270.0 b
+364332 486412 376332 498412 90.0 b
+364332 506412 376332 518412 90.0 b
+218372 431772 230372 443772 180.0 b
+198372 431772 210372 443772 180.0 b
+458692 355132 470692 367132 270.0 b
+458692 335132 470692 347132 270.0 b
+482432 381452 494432 393452 180.0 b
+462432 381452 474432 393452 180.0 b
+414792 354792 426792 366792 270.0 b
+414792 334792 426792 346792 270.0 b
+391592 381772 403592 393772 0.0 b
+411592 381772 423592 393772 0.0 b
+513132 343372 529132 358372 270.0 b
+482132 355872 494132 367872 270.0 b
+482132 335872 494132 347872 270.0 b
+355352 344812 371352 359812 90.0 b
+390352 335312 402352 347312 90.0 b
+390352 355312 402352 367312 90.0 b
